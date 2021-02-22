@@ -4,10 +4,7 @@ const text = 'INSERT INTO developers(first_name, last_name) VALUES($1, $2) RETUR
 const values = ['Cameron', 'Harris']
 
 const client = new Client({
-    host: 'database-1.cgdkrrkdene6.eu-west-1.rds.amazonaws.com',
-    port: 5432,
-    user: 'postgres',
-    password: 'postgres',
+
 })
 
 client.connect()

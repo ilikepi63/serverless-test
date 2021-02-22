@@ -9,10 +9,10 @@ provider:
   stage: dev
   region: eu-west-1
   environment:
-    DATABASE_URL: "database-1.cgdkrrkdene6.eu-west-1.rds.amazonaws.com"
+    DATABASE_URL: ""
     DATABASE_PORT: 5432
-    DATABASE_USERNAME: "postgres"
-    DATABASE_PASSWORD: "postgres"
+    DATABASE_USERNAME: ""
+    DATABASE_PASSWORD: ""
 
 functions:
   app:
