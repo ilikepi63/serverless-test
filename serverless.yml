@@ -1,0 +1,22 @@
+service: my-express-application
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-west-1
+  environment:
+    DATABASE_URL: "database-1.cgdkrrkdene6.eu-west-1.rds.amazonaws.com"
+    DATABASE_PORT: 5432
+    DATABASE_USERNAME: "postgres"
+    DATABASE_PASSWORD: "postgres"
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: "ANY {proxy+}"
