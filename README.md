@@ -1,14 +1,15 @@
-# Welcome to your CDK TypeScript project!
+# Serverless API with directory-based routing 
 
-This is a blank project for TypeScript development with CDK.
+Similar to how the "Next" type of frontend frameworks do browser routing, this serverless project generates functions for each route
+based on the function's location within the "api" directory.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Everything works exactly how a normal cdk app would! 
 
-## Useful commands
+## Things to note
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
+ * The configuration of each function is generic, based on a single Nodejs Function.
+ * cors configurations are also applied to every method from a base "add-cors.ts" file
+
+## Getting Started
+
  * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
